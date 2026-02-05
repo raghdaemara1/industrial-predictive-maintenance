@@ -1,0 +1,30 @@
+project:
+  name: industrial-predictive-maintenance
+  run_dir: artifacts
+
+data:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  sensor_long_path: data/raw/sensor_readings_long.parquet
+  sensor_wide_path: data/raw/sensor_readings_wide.parquet
+  failure_events_path: data/raw/failure_events.parquet
+  downtime_events_path: data/raw/downtime_events.parquet
+  frequency_minutes: 60
+
+labeling:
+  horizon_hours: 24
+  drop_event_window: true
+
+features:
+  config_path: configs/features.yaml
+
+splits:
+  train_start: "2020-01-01"
+  train_end: "2020-02-15"
+  val_end: "2020-03-01"
+  test_end: "2020-03-20"
+
+artifacts:
+  save_models: true
+  save_reports: true
