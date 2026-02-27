@@ -68,23 +68,5 @@ def train_xgb(
         verbose=False,
     )
     return model, le, {"feature_names": list(X_train.columns)}
-```
----
-## File 2 of 2 — `requirements.txt`
-**What changed:** Every package now has an exact version pin. Tested-compatible set that works together on Python 3.10+.
-```
-# industrial-predictive-maintenance — pinned dependencies
-# Python 3.10+
-# Data
-pandas==2.2.3
-numpy==1.26.4
-pyarrow==17.0.0
-# Configuration
-pyyaml==6.0.2
-# Machine learning
-scikit-learn==1.5.2
-xgboost==2.1.3
-# Model serialisation
-joblib==1.4.2
-# Testing
-pytest==8.3.3
+
+
